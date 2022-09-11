@@ -93,7 +93,10 @@ namespace Binding
         private void listbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var car = listbox.SelectedItem as Car;
-            MessageBox.Show(car.Model);
+            InfoWindow window=new InfoWindow();
+            window.Car = car;
+            window.ShowDialog();
+            //MessageBox.Show(car.Model);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
